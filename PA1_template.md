@@ -210,7 +210,7 @@ median(act_agg_sum2$steps)
 ## [1] 10395
 ```
 
-as we can see there is a differnce in mean and median but not in histograms as we impute the NAs with zeros.
+as we can see there is a differnce after we include NAs rows and impute the NAs with zeros.
 
 
 ## Are there differences in activity patterns between weekdays and weekends?
