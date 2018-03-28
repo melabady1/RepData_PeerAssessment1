@@ -6,6 +6,10 @@ output:
 ---
 
 
+```r
+knitr::opts_chunk$set(fig.path="figure/")
+```
+
 ## Loading and preprocessing the data
 
 The following code will download and unzip the csv then load it into "activity data set":
@@ -52,7 +56,7 @@ drawing the histogram of the total number of steps taken each day:
 hist(act_agg_sum$steps, xlab ="Average Steps Per Day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](figure/unnamed-chunk-5-1.png)<!-- -->
 
 the mean and median of the total number of steps taken per day:
 
@@ -89,7 +93,7 @@ plot(x = act_agg_avg$interval, y = act_agg_avg$steps, type = "l",
      xlab =  "5-minute interval", ylab = "Average number of steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](figure/unnamed-chunk-8-1.png)<!-- -->
 
 the 5-minute interval, on average across all the days in the dataset,that contains the maximum number of steps is:
 
@@ -186,7 +190,7 @@ act_agg_sum2 <- aggregate(steps ~ date, data = act_replace_na,
 hist(act_agg_sum2$steps, xlab ="Average Steps Per Day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](figure/unnamed-chunk-12-1.png)<!-- -->
 
 the mean and median of the total number of steps taken per day for the new dataset:
 
@@ -245,6 +249,6 @@ mtext("Interval", side = 1, outer = TRUE, cex = 1, line = 2.2)
 mtext("Number of steps", side = 2, outer = TRUE, cex = 1, line = 2.2)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
+![](figure/unnamed-chunk-15-1.png)<!-- -->
 
 **as we can see there is a difference.**
